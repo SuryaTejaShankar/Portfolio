@@ -1,0 +1,307 @@
+<!--
+Exact-clone-style single-file portfolio (HTML + CSS + JS)
+Author: Generated for Surya Teja
+Instructions: Save this file as `index.html` and open in a browser. Replace placeholders (email, links, images) with your real content.
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Surya Teja — MERN Stack Developer</title>
+  <meta name="description" content="Surya Teja — MERN Stack Developer | Portfolio" />
+  <style>
+    /* ======= Reset & base ======= */
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#7c5cff; --glass: rgba(255,255,255,0.04);
+      --maxw:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071027 0%,#081226 60%);color:#e6eef8}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--maxw);margin:0 auto;padding:32px}
+
+    /* ======= Header / Nav ======= */
+    header{backdrop-filter: blur(6px);position:sticky;top:0;z-index:60}
+    .topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#4bb6ff);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav{display:flex;gap:18px;align-items:center}
+    .navlink{padding:8px 12px;border-radius:8px;transition:all .18s}
+    .navlink:hover{background:var(--glass)}
+    .cta{padding:8px 14px;background:linear-gradient(90deg,var(--accent),#4bb6ff);color:#041225;border-radius:10px;font-weight:600}
+    .hamburger{display:none}
+
+    /* ======= Hero ======= */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:56px 0}
+    .hero-left h1{font-size:36px;margin:0 0 12px}
+    .headline{font-size:18px;color:var(--muted);line-height:1.6}
+    .actions{margin-top:22px;display:flex;gap:12px}
+    .btn{padding:10px 14px;border-radius:10px;border:none;cursor:pointer}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;box-shadow:0 10px 30px rgba(2,6,23,.6)}
+    .profile-img{width:100%;height:320px;border-radius:10px;background:linear-gradient(180deg,#22314d,#0f1620);display:flex;align-items:center;justify-content:center;color:var(--muted)}
+
+    /* ======= About / Skills ======= */
+    section{padding:40px 0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .card{background:var(--card);padding:20px;border-radius:12px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .badge{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);font-size:13px}
+
+    /* ======= Projects ======= */
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .project{display:flex;gap:12px;padding:12px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));align-items:center}
+    .proj-thumb{width:120px;height:80px;border-radius:8px;background:#081425;display:flex;align-items:center;justify-content:center;color:var(--muted)}
+    .proj-meta h4{margin:0 0 6px}
+    .proj-actions{margin-top:8px;display:flex;gap:8px}
+
+    /* ======= Contact ======= */
+    .contact-grid{display:grid;grid-template-columns:1fr 360px;gap:22px}
+    form input,form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+    form button{margin-top:8px}
+
+    /* ======= Footer ======= */
+    footer{padding:20px 0;color:var(--muted);text-align:center}
+
+    /* ======= Responsive ======= */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      nav{display:none}
+      .hamburger{display:block}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand">
+        <div class="logo">ST</div>
+        <div>
+          <div style="font-weight:700">Surya Teja</div>
+          <div style="font-size:12px;color:var(--muted)">MERN Stack Developer</div>
+        </div>
+      </div>
+
+      <nav id="nav">
+        <a class="navlink" href="#about">About</a>
+        <a class="navlink" href="#projects">Projects</a>
+        <a class="navlink" href="#contact">Contact</a>
+        <a class="navlink cta" id="resumeBtn" href="Surya_Teja_Resume.pdf" download>Download Resume</a>
+      </nav>
+
+      <button class="hamburger navlink" id="navToggle">☰</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="home">
+      <div class="hero-left">
+        <h1>Hi, I’m Surya Teja — MERN Stack Developer</h1>
+        <p class="headline">I build responsive, user-friendly web applications and APIs. I specialize in React, Node.js, Express, and MongoDB. I design clean UI and implement robust backend systems.</p>
+        <div class="actions">
+          <button class="btn" id="hireBtn">Hire Me</button>
+          <button class="btn btn-outline" id="projectsBtn">See Projects</button>
+        </div>
+
+        <div style="margin-top:28px;display:flex;gap:16px;align-items:center">
+          <div style="min-width:110px">
+            <div style="font-size:12px;color:var(--muted)">Location</div>
+            <div>India</div>
+          </div>
+          <div style="min-width:110px">
+            <div style="font-size:12px;color:var(--muted)">Experience</div>
+            <div>2+ years</div>
+          </div>
+          <div style="min-width:110px">
+            <div style="font-size:12px;color:var(--muted)">Email</div>
+            <div><a href="mailto:surya@example.com">ssurya.suraj04@gmail.com</a></div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <div class="profile-img"><img src="my_profile_pic.jpg" alt="Surya Teja Profile Picture"></div>
+        <div style="margin-top:12px;display:flex;justify-content:space-between;align-items:center">
+          <div>
+            <div style="font-weight:700">Surya Teja</div>
+            <div style="font-size:13px;color:var(--muted)">Full-stack developer — React & Node</div>
+          </div>
+          <div style="text-align:right">
+            <div style="font-size:12px;color:var(--muted)">Resume</div>
+            <div style="font-weight:700">Available</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about">
+      <div class="grid-2">
+        <div class="card">
+          <h3>About Me</h3>
+          <p style="color:var(--muted)">I’m Surya — a MERN Stack developer with a passion for building production-ready web applications. I build clean UI, responsive designs, and scalable backends. I enjoy learning new technologies and collaborating on impactful projects.</p>
+
+          <div style="margin-top:12px">
+            <strong>Tech stack</strong>
+            <div class="skills">
+              <div class="badge">React</div>
+              <div class="badge">Node.js</div>
+              <div class="badge">Express</div>
+              <div class="badge">MongoDB</div>
+              <div class="badge">JavaScript</div>
+              <div class="badge">HTML & CSS</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Experience</h3>
+          <p style="color:var(--muted)">Worked on note-taking applications, hospital management systems, and several full-stack projects. Comfortable with Git, REST APIs, and deployment.</p>
+
+          <h4 style="margin-top:12px">Education</h4>
+          <p style="color:var(--muted);margin:0">B.Tech — In Progress</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h3>Selected Projects</h3>
+      <div class="projects">
+        <div class="project">
+          <div class="proj-thumb">Notes App</div>
+          <div class="proj-meta">
+            <h4>Notes Application (React)</h4>
+            <div style="color:var(--muted);font-size:13px">A full CRUD notes app with authentication and image support.</div>
+            <div class="proj-actions">
+              <button class="btn" onclick="openProject('https://github.com/yourusername/notes-app')">GitHub</button>
+              <button class="btn btn-outline" onclick="openProject('https://example.com/notes-demo')">Live</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="proj-thumb">Hospital</div>
+          <div class="proj-meta">
+            <h4>Hospital Management (MERN)</h4>
+            <div style="color:var(--muted);font-size:13px">Doctor dashboard, appointments, user authentication, and admin panel.</div>
+            <div class="proj-actions">
+              <button class="btn" onclick="openProject('https://github.com/yourusername/hospital-management')">GitHub</button>
+              <button class="btn btn-outline" onclick="openProject('#')">Demo</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="proj-thumb">Portfolio</div>
+          <div class="proj-meta">
+            <h4>Portfolio Website</h4>
+            <div style="color:var(--muted);font-size:13px">Personal portfolio site with projects, blog links, and contact form.</div>
+            <div class="proj-actions">
+              <button class="btn" onclick="openProject('#')">GitHub</button>
+              <button class="btn btn-outline" onclick="openProject('#')">Live</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="project">
+          <div class="proj-thumb">Other</div>
+          <div class="proj-meta">
+            <h4>Other Projects</h4>
+            <div style="color:var(--muted);font-size:13px">Small utilities, scripts, and demos used for interviews and training.</div>
+            <div class="proj-actions">
+              <button class="btn" onclick="openProject('#')">GitHub</button>
+              <button class="btn btn-outline" onclick="openProject('#')">Live</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h3>Contact</h3>
+      <div class="contact-grid">
+        <div class="card">
+          <p style="color:var(--muted)">Want to work together or hire me for a role? Send a message — I usually reply within a day.</p>
+
+          <div style="margin-top:12px">
+            <strong>Email</strong>
+            <div style="color:var(--muted)"><a href="mailto:ssurya.suraj04@gmail.com">ssurya.suraj04@gmail.com</a></div>
+          </div>
+
+          <div style="margin-top:12px">
+            <strong>Socials</strong>
+            <div style="color:var(--muted)">GitHub: <a href="https://github.com/SuryaTejaShankar">SuryaTejaShankar</a></div>
+          </div>
+        </div>
+
+        <form class="card" id="contactForm">
+          <label for="name">Name</label>
+          <input id="name" required placeholder="Your name" />
+          <label for="email">Email</label>
+          <input id="email" type="email" required placeholder="you@domain.com" />
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Tell me about the project"></textarea>
+          <button type="submit" class="btn cta">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Surya Teja</div>
+  </footer>
+
+  <script>
+    // Small interactive scripts to make all buttons work
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function openProject(url){
+      if(!url || url === '#'){
+        alert('Live/demo not available. Replace link with your project URL.');
+        return;
+      }
+      window.open(url, '_blank');
+    }
+
+    // Nav toggle for small screens
+    const navToggle = document.getElementById('navToggle');
+    navToggle.addEventListener('click', ()=>{
+      const nav = document.getElementById('nav');
+      if(nav.style.display === 'flex') nav.style.display = 'none'; else nav.style.display = 'flex';
+      nav.style.flexDirection = 'column';
+      nav.style.gap = '12px';
+      nav.style.position = 'absolute';
+      nav.style.right = '24px';
+      nav.style.top = '64px';
+      nav.style.background = 'rgba(4,8,18,0.6)';
+      nav.style.padding = '12px';
+      nav.style.borderRadius = '10px';
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', function(e){
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // Hire button & projects button
+    document.getElementById('hireBtn').addEventListener('click', ()=>{
+      window.location.href = 'mailto:surya@example.com?subject=Hiring%20Enquiry&body=Hi%20Surya,';
+    });
+    document.getElementById('projectsBtn').addEventListener('click', ()=>{
+      document.getElementById('projects').scrollIntoView({behavior:'smooth'});
+    });
+
+    // Contact form submission (works without a backend by opening mail client)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
